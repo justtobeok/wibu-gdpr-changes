@@ -1,6 +1,6 @@
 # Anpassungen im Code für WiBU GDPR-Compliance
 
-  ### HEAD
+  ## HEAD
   Aus dem `<head>` müssen alle Scripte die mit Google Analytics zu tun haben entfernt werden.
   Folgenden Block und alle `<script>` Aufrufe bzgl. GA bitte entfernen.
 
@@ -14,7 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 ```
 
-  ### Datei sidebar-default.php
+  ## Datei sidebar-default.php
 
   Einbindung des neuen CookieConsent oberhalb von `<div id="serviceBar">`.
   Pfad zur Datei im Template: `wibu-theme/templates/partials/gdpr/cookieconsent.php`
@@ -27,11 +27,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="serviceBar">
 ```
 
-  ### CSS für den neuen Cookie Disclaimer
+  ## CSS für den neuen Cookie Disclaimer
 
   Kommen im Folgenden als sass oder compiliertes css.
 
-  ####Als SASS für Foundation 6
+  ### Als SASS für Foundation 6
 
 ```css
   #cookieConsent {
@@ -146,7 +146,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 ```
 
-  ####Als Compiliertes CSS
+  ### Als Compiliertes CSS
 
 ```css
 #cookieConsent {
@@ -271,7 +271,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 ```
 
-### JS für den neuen Cookie Disclaimer und die Einbindung von YouTube-Videos
+## JS für den neuen Cookie Disclaimer
 
 ```js
 
@@ -374,4 +374,6 @@ $(document).ready(function() {
 
 ```
 
-Thats it. Bitte prüfen ob ein Klick auf Zustimmen oder ablehnen jeweils Google Analytics Tracking enabled/disabled in die Console logt, und entsprechende Cookies gesetzt werden.
+Bitte prüfen ob ein Klick auf zustimmen oder ablehnen jeweils Google Analytics Tracking enabled/disabled in die Console logt, und entsprechende Cookies gesetzt werden.
+
+Fertig
