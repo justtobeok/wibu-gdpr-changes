@@ -38,6 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: $dust;
     transition: height .4s ease;
     overflow: hidden;
+    display: none;
 
     & > div {
       margin:0 -10px;
@@ -152,7 +153,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #cookieConsent {
   background: #EBEBEB;
   transition: height .4s ease;
-  overflow: hidden; }
+  overflow: hidden;
+  display: none; }
   #cookieConsent > div {
     margin: 0 -10px;
     padding-top: 0.9375rem;
@@ -309,13 +311,14 @@ var jubiGdpr = {
     });
 
     if ( Cookies.get( 'GAconsentGiven' ) ) {
-      $('#cookieConsent').hide();
       if ( Cookies.get( 'GAconsentGiven' ) == 1 ) {
         $('.gaallow').removeClass('hollow').addClass('is-checked');
         jubiGdpr.loadAnalytics();
       } else {
         $('.gadeny').removeClass('hollow').addClass('is-checked');
       }
+    } else {
+      $('#cookieConsent').show();
     }
   },
 
